@@ -1,0 +1,82 @@
+*, :root, html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root, .App {
+  width: 100%;
+  height: 100%;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper form {
+  background-color: #1779DB;
+  width: 98%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: fit-content;
+  padding: 10px 20px;
+}
+
+.form-wrapper form input::placeholder, 
+.form-wrapper form textarea::placeholder {
+  color: #ffffff96;
+}
+
+.form-wrapper form label {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+}
+
+.form-wrapper form input {
+  padding: 10px;
+  background-color: transparent;
+  border: #ffffff 1px solid;
+  margin-top: 5px;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+}
+
+.form-wrapper form textarea {
+  padding: 10px;
+  background-color: transparent;
+  border: #ffffff 1px solid;
+  margin-top: 5px;
+  width: 100%;
+  height: 200px;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+}
+
+.form-wrapper form .flex-row div:nth-child(1){
+  grid-area: one;
+}
+.form-wrapper form .flex-row div:nth-child(2){
+  grid-area: two;
+}
+
+.form-wrapper form .flex-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.margin-bottom{
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 460px) {
+  .form-wrapper form .flex-row {
+    flex-wrap: wrap;
+  }
+}
